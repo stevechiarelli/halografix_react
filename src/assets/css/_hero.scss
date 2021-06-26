@@ -1,0 +1,198 @@
+/* hero section */
+
+.hero {
+    background: url("../images/hero-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-container {
+    padding-top: 11em;
+    opacity: 0;
+    animation-name: headline;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+    h1, h5 {
+        line-height: 1.2;
+    }
+    
+    h5 {
+        margin-top: 0.7em;
+        font-size: 0.8em;
+        font-weight: 500;
+        width: 80%
+    }
+    
+    .btn-primary {
+        color: var(--text-light);
+        border: 3px solid var(--text-light);
+        margin-top: 1.7em;
+    }
+
+    .btn-primary:hover {
+        background: #222;
+    }
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+    border-top: 10px solid #fff;
+    position: absolute;
+    bottom: 3%;
+    left: 48%;
+    opacity: 0;
+    animation-name: arrow;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes headline {
+    from {
+        opacity: 0;
+        padding-top: 9em;
+    }
+    to {
+        opacity: 1;
+        padding-top: 11em;
+    }
+}
+
+@keyframes arrow {
+    from {
+        opacity: 0;
+        bottom: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 3%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-container {
+        padding-top: 16em;
+
+        h1 {
+            width: 85%;
+            font-size: 2.5em;
+        }
+    
+        h5 {
+            width: 65%;
+            font-size: 0.9em;
+        }
+    }
+
+    .triangle-down {
+        bottom: 8%;
+    }
+
+    @keyframes headline {
+        from {
+            opacity: 0;
+            padding-top: 14em;
+        }
+        to {
+            opacity: 1;
+            padding-top: 16em;
+        }
+    }
+
+    @keyframes arrow {
+        from {
+            opacity: 0;
+            bottom: 0;
+        }
+        to {
+            opacity: 1;
+            bottom: 8%;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .hero {
+        background: url("../images/hero.jpg");
+        background-size: cover;
+        background-position: left;
+    }
+
+    .hero-container {
+        padding-top: 12em;
+
+        h1, h5 {
+            width: 45%
+        }
+    }
+
+    @keyframes headline {
+        from {
+            opacity: 0;
+            padding-top: 10em;
+        }
+        to {
+            opacity: 1;
+            padding-top: 12em;
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1112px) {
+    .hero-container {
+        h1, h5 {
+            width: 75%
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-height: 415px) {
+    .hero-container {
+        padding-top: 7em;
+    }
+
+    @keyframes headline {
+        from {
+            opacity: 0;
+            padding-top: 5em;
+        }
+        to {
+            opacity: 1;
+            padding-top: 7em;
+        }
+    }
+}
+
+@media (min-height: 1366px) {
+    .hero {
+        background: url("../images/hero.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-container {
+        padding-top: 18em;
+
+        h1, h5 {
+            width: 60%;
+        }
+    }
+    
+    @keyframes headline {
+        from {
+            opacity: 0;
+            padding-top: 16em;
+        }
+        to {
+            opacity: 1;
+            padding-top: 18em;
+        }
+    }
+}

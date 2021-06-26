@@ -1,0 +1,141 @@
+/* work section */
+
+.work {
+    position: relative;
+    margin: 8em 0 4em 0;
+
+    .container {
+        margin-top: -70px;
+    }
+
+    .projects {
+        .item {
+            position: relative;
+            overflow: hidden;
+
+            h5 {
+                color: var(--primary);
+            }
+
+            span {
+                font-size: 0.8em;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                transition: 0.5s all ease-in-out;
+                opacity: 1;
+                max-height: 300px;
+            }
+
+            .overlay {
+                position: absolute;
+                opacity: 0;
+                text-align: center;
+                transition: .5s ease;
+            }
+
+            .item-container:hover img, .item-container:hover {
+                opacity: 0.6;
+                cursor: pointer;
+            }
+    
+            .item-container:hover .overlay, .item-container:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        background: url("../images/dots-sm.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -20px;
+        top: 0px;
+        width: 50px;
+        height: 700px;
+        z-index: -1;
+    }
+}
+
+.videography-work:after {
+    content: 'our work';
+    position: absolute;
+    top: -125px;
+    left: -30px;
+    font-size: 8em;
+    font-weight: 600;
+    color: var(--primary-watermark);
+    z-index: -1000;
+    width: 1500px;
+}
+
+.webdesign-work:after {
+    content: 'our work';
+    position: absolute;
+    top: -125px;
+    left: -30px;
+    font-size: 8em;
+    font-weight: 600;
+    color: var(--primary-watermark);
+    z-index: -1000;
+    width: 1500px;
+}
+
+.pagination {
+    text-align: center;
+    margin: 1em 0 1.6em 0;
+}
+
+.pagination button {
+    background: transparent;
+    border: 0;
+    color: var(--text-dark);
+    font-size: 1.3em;
+    padding: 0em 0.5em 2em 0.5em;
+}
+
+.pagination button.active, .pagination button:hover {
+    color: var(--primary);
+}
+
+.pagination button.active {
+    cursor: initial;
+}
+
+@media only screen and (min-width: 768px) {
+    .work .projects {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .work .projects .item {
+        margin: 0.5em;
+        width: 300px;
+        align-self: flex-end;
+    }
+
+    .work .projects .featured {
+        flex-basis: 500px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .work {
+        margin: 6em 0 4em 0;
+
+        &:before {
+            content: '';
+            background: url("../images/dots.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            right: -25px;
+            top: -30px;
+            width: 110px;
+            height: 800px;
+            z-index: -1;
+        }
+    }
+}

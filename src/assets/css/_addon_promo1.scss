@@ -1,0 +1,53 @@
+/* add-on promo 1 section */
+
+.promo-1 {
+    .content {
+        background: var(--background3);
+
+        h3 {
+            color: var(--primary-light);
+            text-align: right;
+            padding-top: 1em;
+            font-size: 1.1em;
+        }
+
+        h3:first-child {
+            padding-top: 2em;
+        } 
+        
+        p {
+            color: var(--text-light);
+            text-align: right;
+            font-size: 0.8em;
+        }
+        
+        p:last-child {
+            padding-bottom: 4em;
+        }
+    }    
+}
+
+@media only screen and (min-width: 992px) {
+    .promo-1 {
+        .content {
+            background: url("../images/halografix-productions.jpg");
+            background-size: cover;
+            background-position: right;
+            width: 100%;
+
+            h3, p {
+                text-align: right;
+                width: 40%;
+                margin: 0.3em 62%;
+            }
+        }
+
+        img {
+            display: none;
+        }
+
+        .container {
+            padding-top: 1em;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/* videography cta */
+
+.videography-cta {
+    background: var(--background5);
+    padding: 5em 0 5em 0;
+
+    .container {
+        padding-right: 2em;
+        
+        h2 {
+            color: var(--primary);
+        }
+        
+        .btn-primary {
+            margin-top: 1em;
+            color: var(--primary);
+            border: 3px solid var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: var(--background1);
+        }
+
+        .link {
+            color: var(--primary);
+            font-size: 1em;
+            font-style: italic;
+            text-decoration: underline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .videography-cta {    
+        .container {
+            padding-right: 4em;
+        }
+    }
+}

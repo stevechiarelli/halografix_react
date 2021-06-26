@@ -1,0 +1,156 @@
+/* modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+}
+  
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animateright;
+    animation-duration: 0.4s
+}
+
+.modal-dialog {
+    overflow-y: initial !important;
+}
+  
+@-webkit-keyframes animateright {
+    from {left:-300px; opacity:0} 
+    to {left:0; opacity:1}
+}
+  
+@keyframes animateright {
+    from {left:-300px; opacity:0}
+    to {left:0; opacity:1}
+}
+  
+.close {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--primary);
+    font-size: 35px;
+    font-weight: bold;
+    margin: 15px 35px 0 0;
+}
+
+.iframe-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover, .close:focus, .iframe-close:hover, .iframe-close:focus {
+    color: var(--primary-light);
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.modal-body {
+    padding: 5em 1.5em 0 1.5em;
+    text-align: center;
+
+    img {
+        max-width: 600px;
+        margin-top: 2em;
+    }
+}
+
+.modal-info {  
+    h4 {
+        color: var(--text-dark);
+        margin-top: 0.5em;
+    }
+
+    p {
+        color: var(--text-dark);
+        font-size: 0.9em;
+        margin: 0 0 2em 0;
+        padding: 0;
+    }
+
+    button {
+        margin-left: 0.5em;
+        padding: 1.3em 2.2em 1.3em 2.2em;
+    }
+}
+
+.modal-form {
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.modal-iframe {
+    iframe {
+        margin: 3em auto 0 auto;
+        padding-top: 3em;
+        display: block;
+        width: 90%;
+        height: 50%;
+        border: none;
+        -webkit-animation-name: animateright;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animateright;
+        animation-duration: 0.4s
+    }
+
+    h4 {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .modal-body {
+        padding: 2em;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .modal-content {
+        width: 50%;
+    }
+
+    .modal-iframe {
+        iframe {
+            margin: auto;
+            width: 70%;
+            height: 85%;
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: -100px;
+        color: #f1f1f1;
+        font-size: 40px;
+    }
+}

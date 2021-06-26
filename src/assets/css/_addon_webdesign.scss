@@ -1,0 +1,81 @@
+/* add-on web design section */
+
+.web-design {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 8em 0 0 0;
+
+    &::after {
+        content: 'add-ons';
+        position: absolute;
+        top: -115px;
+        left: -30px;
+        font-size: 8em;
+        font-weight: 600;
+        color: var(--primary-watermark);
+        z-index: -1000;
+        width: 1000px;
+    }
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 1.5%;
+    max-width: 800px;
+    height: 100%;
+}
+
+.web-design-center {
+    height: 75%;
+
+    h2 {
+        background: var(--background2);
+        width: 100%;
+        padding-top: 0.5em;
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 3%;
+        height: 28%;
+    }
+}
+
+.web-design-right {
+    background: var(--background2);
+    padding: 3.5em 0 3em 0;
+
+    h3 {
+        font-weight: 600;
+        color: var(--text-light);
+        font-size: 1.4em;
+    }
+
+    p, ul li {
+        color: var(--text-light);
+    }
+
+    ul {
+        list-style-type: initial;
+        margin-left: 2em;
+    }
+
+    ul li {
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .web-design {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-column-gap: 1.8%;
+        max-width: 1200px;
+        margin: 7em auto 5em auto;
+        padding-top: 1em;
+    }
+
+    .web-design-right {
+        padding: 3em 1.5em 0 1.5em;
+    }
+}

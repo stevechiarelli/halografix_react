@@ -1,0 +1,37 @@
+/* live stream cta */
+
+.livestream-cta {
+    background: var(--secondary);
+    padding: 5em 0 5em 0;
+
+    .container {
+        text-align: center;
+
+        h2 {
+            color: var(--primary-dark);
+        }
+    
+        p {
+            color: var(--primary-dark);
+        }
+    
+        .btn-primary {
+            margin-top: 1em;
+            color: var(--primary-dark);
+            border: 3px solid var(--primary-dark);
+        }
+    
+        .btn-primary:hover {
+            background: #DFCBA4;
+        }
+
+        .link {
+            color: var(--primary-dark);
+            font-size: 1em;
+            font-style: italic;
+            text-decoration: underline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+/* live stream section */
+
+.live-stream {
+    background: var(--background3);
+    padding-bottom: 7em;
+    position: relative;
+    z-index: -1000;
+    overflow: hidden;
+
+    h2 {
+        color: var(--secondary);
+        text-align: center;
+        margin-top: 3em;
+    }
+    
+    p {
+        color: var(--text-light);
+        line-height: 2.0;
+        text-align: center;
+    }
+    
+    &::before {
+        content: '';
+        background: url("../images/dots-sm.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -20px;
+        top: 385px;
+        width: 50px;
+        height: 700px;
+        z-index: -1;
+    }
+    
+    &::after {
+        content: 'live stream';
+        position: absolute;
+        top: 500px;
+        left: -30px;
+        font-size: 8em;
+        font-weight: 600;
+        color: var(--primary-watermark);
+        opacity: 0.1;
+        z-index: -999;
+        width: 1000px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .live-stream-container {
+        display: grid;
+        grid-template-columns: 52% 43%;
+        grid-column-gap: 5%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .live-stream {
+        h2 {
+            margin-top: 4.5em;
+        }
+    
+        p {
+            font-size: 1em;
+            width: 95%;
+        }
+    
+        h2, p {
+            text-align: left;
+        }
+    
+        img {
+            margin-top: 8em;
+        }
+    
+        &::after {
+            top: 30px;
+            right: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .live-stream::before {
+        content: '';
+        background: url("../images/dots.svg");
+        background-repeat: no-repeat;
+        position: absolute;
+        right: -25px;
+        top: 0px;
+        width: 110px;
+        height: 800px;
+        z-index: -1;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+    .live-stream-container {
+        grid-column-gap: 20px;
+    }
+
+    .live-stream {
+        h2 {
+            margin-top: 4em;
+        }
+    
+        p {
+            font-size: 0.8em;
+        }
+    }
+}

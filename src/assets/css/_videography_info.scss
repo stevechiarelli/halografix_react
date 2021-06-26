@@ -1,0 +1,74 @@
+/* videography info section */
+
+.videography-info {
+    .content {
+        background: var(--background3);
+        padding-top: 1.5em;
+
+        h3 {
+            color: var(--text-light);
+            padding-top: 50px;
+        }
+        
+        p {
+            color: var(--text-light);
+        }
+        
+        ul {
+            list-style-type: initial;
+            margin: 2em 1em;
+        }
+        
+        ul li {
+            color: var(--primary-light);
+            margin: .3em 0;
+        }
+
+        p:last-child {
+            padding-bottom: 2.0em;
+        }
+    }
+
+    img {
+        margin-bottom: -8px;
+    }
+}
+
+@media only screen and (min-width: 768px) { 
+    .videography-info {
+        .content {
+            padding-top: 3em;
+
+            p:last-child {
+                padding-bottom: 3em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .videography-info {
+        .content {
+            background: url("../images/videography.jpg");
+            background-size: cover;
+            background-position: left;
+            height: 750px;
+            width: 100%;
+
+            h3, p {
+                text-align: left;
+                width: 45%;
+            }
+        
+            ul {
+                text-align: left;
+                width: 45%;
+                margin-left: 1em;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+}

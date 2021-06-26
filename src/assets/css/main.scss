@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #6F7FA3;
+    --primary-light: #BDCEF2;
+    --primary-dark: #535E79;
+    --primary-watermark: #EFF1F5;
+    --secondary: #D3C09A;
+    --text-light: #EEEEEE;
+    --text-dark: #666666;
+    --background1: #F4F7F7;
+    --background2: #6F7FA3;
+    --background3: #1A1A1A;
+    --background4: #333333;
+    --background5: #FFFFFF;
+    --background6: #1F3857;
+}
+
+@import "global";
+@import "header";
+@import "hero";
+@import "about";
+@import "videography";
+@import "videography_info";
+@import "videography_features";
+@import "videography_work";
+@import "videography_cta";
+@import "livestream";
+@import "livestream_cta";
+@import "addon_webdesign";
+@import "addon_promo1";
+@import "addon_promo2";
+@import "addon_cta";
+@import "contact";
+@import "footer";
+@import "modal";
+@import "wizard";

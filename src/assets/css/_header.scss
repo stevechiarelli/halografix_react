@@ -1,0 +1,158 @@
+/* header */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    padding: 1.5em 0 0.5em 0;
+    z-index: 1000;
+    opacity: 0;
+    transition: 0.7s;
+    animation-name: navbar;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+
+    .container {
+        padding-bottom: 0.3em;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-light, .logo-dark {
+    width: 115px;
+    margin: 0;
+    transition: 0.6s;
+}
+
+.nav-btn-light, .nav-btn-dark{
+    cursor: pointer;
+    outline: none;
+}
+
+nav ul {
+    overflow: hidden;
+    transition: all 0.3s linear;
+
+    li {
+        padding: 0;
+        text-align: center;
+        margin-top: 1.5em;
+    }
+
+    li button {
+        color: var(--text-light);
+        transition: all 0.3s linear;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+
+    li button:hover {
+        color: var(--primary);
+        cursor: pointer;
+    }
+}
+
+.nav-links {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+
+    .active button {
+        color: var(--primary);
+    }
+}
+
+.show-nav {
+    height: 300px;
+}
+
+.navbar.sticky {
+    background: #fff;
+}
+
+.navbar.sticky .logo-light, .navbar.sticky .nav-btn-light {
+    display: none;
+}
+
+.navbar.sticky .logo-dark, .navbar.sticky .nav-btn-dark {
+    display: inline;
+}
+
+.navbar.sticky nav ul li button {
+    color: #666;
+}
+
+.navbar.sticky .active button, .navbar.sticky nav ul li button:hover {
+    color: var(--primary);
+}
+
+@keyframes navbar {
+    from {
+        opacity: 0;
+        padding: 0;
+    }
+    to {
+        opacity: 1;
+        padding-top: 1em 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .logo-light, .logo-dark {
+        width: 140px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar {
+        background: transparent;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.7em;
+        }
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    nav ul {  
+        display: flex;
+
+        li {
+            padding: 0 0.8em;
+            margin: 0;
+        }
+    
+        li button  {
+            color: var(--text-light);
+            font-size: 0.7em;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 0;
+        }
+
+        li img {
+            width: 25px;
+            margin: 0.4em 0 0 0;
+            padding: 0;
+        }
+
+        &:last-child {
+            padding: 0;
+        }
+    }
+
+    .nav-links {
+        height: auto;
+    }
+}
