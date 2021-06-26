@@ -85,9 +85,13 @@ class FormWizard extends React.Component {
         }
     }
 
-    handleDayClick = (day) => {
+    handleDayClick = (day, modifiers = {}) => {
+        if (modifiers.disabled) {
+            return;
+        }
+
         this.setState({
-          date: day,
+          date: modifiers.selected ? null : day
         });
     }
 
