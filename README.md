@@ -1,2 +1,2 @@
 # halografix
-One Page Creative Agency Website
+One Page Creative Agency Website (React)
